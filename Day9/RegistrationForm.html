@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fairy Tale Friends Meetup</title>
+    <style>
+        body {
+            background-color: #fce4ec;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            max-width: 1000px;
+            margin: 100px auto;
+            background: #ffffff;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+
+        h1 {
+            color: #ba68c8;
+            font-size: 2rem;
+    
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #d034be;
+        }
+
+        label {
+            font-size: 1.1rem;
+            color: #6a1b9a;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], select {
+            width: 60%;
+            padding: 10px;
+            margin: 5px ;
+            border: 2px solid #e1a7ec;
+            border-radius: 30px;
+        }
+
+
+        button {
+            background-color: #ba68c8;
+            color: #fff;
+            padding: 10px;
+            width: 60%;
+            border-radius: 20px;
+            font-size: 1rem;
+            margin: 35px;
+        }
+
+
+
+        .fairy-image {
+            max-width: 300px;
+            margin: 10px auto;
+        }
+
+        footer {
+            margin: 2px;
+            font-size: 0.9rem;
+            color: #8e44ad;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Fairy Tale Friends Meetup</h1>
+        <img src="https://palusakalpana.github.io/Forms/Design%201.png" alt="Fairy Tale" class="fairy-image">
+        <p>Join us for a magical meetup with fairies, castles, and more!</p>
+
+        <form action=" " >
+            <label for="name">Your Name</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your fairy tale name" required><br>
+
+            <label for="email">Your Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+            <label for="dob">Date of Birth</label><br>
+            <input type="date" id="dob" name="dob" required><br>
+
+            <label for="role">Who are you in the fairy tale?</label><br>
+            <select id="role" name="role" required>
+                <option value="fairy">Fairy</option>
+                <option value="prince">Prince</option>
+                <option value="princess">Princess</option>
+                <option value="wizard">Wizard</option>
+                <option value="dragon">Dragon</option>
+                <option value="other">Other</option>
+            </select><br>
+            
+            <label for="gender">Your Gender</label><br>
+            <input type="radio" id="male" name="gender" value="male" required> <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female" required> <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other" required> <label for="other">Other</label><br>
+        
+
+            <label for="number">Your Contact Number</label><br>
+            <input type="number" id="number" name="number" placeholder="Enter your contact number" ><br>
+
+
+            <label for="members">Number of Members Attending</label><br>
+            <input type="number" id="members" name="members" placeholder="Enter total members" required><br>
+            <br>
+
+            <label for="date">Choose a Date</label><br>
+            <input type="radio" id="dec1" name="date" value="dec1" required> <label for="dec1">December 1</label><br>
+            <input type="radio" id="dec2" name="date" value="dec2" required> <label for="dec2">December 2</label><br>
+            <input type="radio" id="dec3" name="date" value="dec3" required> <label for="dec3">December 3</label><br>
+<br>
+            <label for="time">Choose a Time Slot</label><br>
+            <input type="radio" id="slot1" name="time" value="11am-2pm" required> <label for="slot1">11 AM - 2 PM</label><br>
+            <input type="radio" id="slot2" name="time" value="5pm-8pm" required> <label for="slot2">5 PM - 8 PM</label><br>
+<br>
+            <label for="fees">Choose Fee Option</label><br>
+            <input type="radio" id="fee300" name="fees" value="300" required> <label for="fee300">1 Person - 300</label><br>
+            <input type="radio" id="fee1000" name="fees" value="1000" required> <label for="fee1000">Group of 4 (No Food) - 1000</label><br>
+            <input type="radio" id="fee1800" name="fees" value="1800" required> <label for="fee1800">Group of 4 (With Food) - 1800</label><br>
+<br>
+            <label for="costume">Do you need a costume?</label><br>
+            <input type="radio" id="costumeYes" name="costume" value="yes"> <label for="costumeYes">Yes (+500)</label><br>
+            <input type="radio" id="costumeNo" name="costume" value="no"> <label for="costumeNo">No</label><br>
+<br>
+            <label for="interests">Activity Interests</label><br>
+            <input type="checkbox" id="singing" name="interests" value="singing"> <label for="singing">Singing</label><br>
+            <input type="checkbox" id="dancing" name="interests" value="dancing"> <label for="dancing">Dancing</label><br>
+            <input type="checkbox" id="storytelling" name="interests" value="storytelling"> <label for="storytelling">Storytelling</label><br>
+            <input type="checkbox" id="charades" name="interests" value="charades"> <label for="charades">Charades</label><br>
+            <input type="checkbox" id="story creation" name="interests" value="story creation"> <label for="story creation">Story Creation</label><br>
+
+
+            <div class="qr-code-section">
+                <p>Scan the QR code below for payment:</p>
+                <img src="https://palusakalpana.github.io/Forms/QRcode.jpg" alt="QR Code for Payment"  height="150" width="150" >
+            </div>
+
+            <button type="submit">Join the Magic!</button>
+        </form>
+
+        <footer>
+            <p>Let the magic begin! ✨</p>
+        </footer>
+        <br>
+    </div>
+</body>
+</html>

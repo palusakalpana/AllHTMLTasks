@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4d3f2;
+        }
+        
+        .signup-form {
+            background: #fff;
+            padding: 50px;
+            border-radius: 30px;
+            width: 400px;
+            max-width: 500px;
+        }
+        .signup-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 9px;
+        }
+        .signup-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 9px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .signup-form button:hover {
+            background-color: #0056b3;
+        }
+        .signup-form p {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .signup-form p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .signup-form p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            
+            const usernamePattern = /^[a-zA-Z0-9_]{3,15}$/;
+            if (!usernamePattern.test(username)) {
+                alert("Username must be 3-15 characters long and can only contain letters, numbers, and underscores.");
+                return false;
+            }
+
+            
+            const emailPattern = /^[a-zA-Z0-9_]+@gmail\.com$/;
+            if (!emailPattern.test(email)) {
+                alert("Email must be a valid Gmail address.");
+                return false;
+            }
+
+            
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Phone number must be exactly 10 digits.");
+                return false;
+            }
+
+            
+            if (password === "" || confirmPassword === "") {
+                alert("Password and confirm password cannot be empty.");
+                return false;
+            }
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            
+            window.location.href = "/Day10/SignupSuccess.html";
+            return false; 
+        }
+    </script>
+</head>
+<body>
+    <form class="signup-form" onsubmit="return validateForm()">
+        <h1>SignUp here!</h1>
+        <input type="text" id="username" placeholder="Username" required pattern="^[a-zA-Z0-9_]{3,15}$" minlength="3" maxlength="15" title="Username must be 3-15 characters long and can only contain letters, numbers, and underscores.">
+        <input type="email" id="email" placeholder="Email" required pattern="[a-zA-Z0-9_]+@gmail\.com">
+        <input type="tel" id="phone" placeholder="Phone Number" required pattern="\d{10}" minlength="10" maxlength="10">
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        <button type="submit">SignUp</button>
+        <p>Already have an account? <a href="/Day10/Signin.html">Login</a></p>
+    </form>
+</body>
+</html>
